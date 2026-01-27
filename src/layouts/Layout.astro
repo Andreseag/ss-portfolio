@@ -50,13 +50,18 @@ const canonicalURL = Astro.url;
   </head>
 	<body class="bg-[#fcfcfc] text-[#1a1a1a] antialiased selection:bg-black selection:text-white">
 		
-		<nav class="fixed top-0 w-full z-50 bg-white px-20 py-10 flex justify-between items-start uppercase tracking-widest text-[10px] font-bold">
-			<a href="/" class="hover:opacity-50 transition-opacity text-xl font-extrabold">San Productions</a>
-			<div class="flex items-end gap-2">
-				<a href="/" class="hover:opacity-50 transition-opacity">Trabajos</a>
-				<a href="/about" class="hover:opacity-50 transition-opacity">Sobre nosotros</a>
-			</div> 
-		</nav>
+		<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md px-6 md:px-20 py-6 md:py-10 flex justify-between items-center md:items-start uppercase tracking-widest text-[10px] font-bold border-b border-zinc-100 md:border-none">
+  
+      <a href="/" class="hover:opacity-50 transition-opacity text-base md:text-xl font-extrabold tracking-tighter">
+        San Productions
+      </a>
+
+      <div class="flex gap-4 md:gap-8 items-center">
+        <a href="/" class="hover:opacity-50 transition-opacity py-2">Trabajos</a>
+        <a href="/about" class="hover:opacity-50 transition-opacity py-2">Nosotros</a>
+      </div> 
+
+    </nav>
 
 		<main>
 			<slot />
