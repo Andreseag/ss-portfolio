@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const team = [
+  { role: 'Director / Founder', name: 'Santiago San' },
+  { role: 'Head of Production', name: 'Valentina Rios' },
+  { role: 'Editor / Colorist', name: 'Mateo Black' },
+];
+---
+
+<Layout title="About — San Productions">
+  <section class="pt-40 px-8 md:px-20 max-w-6xl">
+    
+    <span class="text-[10px] font-mono uppercase tracking-[0.4em] opacity-40 mb-8 block">
+      [01] The Studio
+    </span>
+    
+    <h1 class="text-4xl md:text-7xl font-light italic leading-tight mb-20 tracking-tighter">
+      Creamos imágenes que <br /> 
+      <span class="ml-0 md:ml-32">permanecen en el tiempo.</span>
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-20 mb-40">
+      <div class="space-y-6 text-xl md:text-2xl font-light text-zinc-400 leading-relaxed">
+        <p>
+          San Productions es una productora boutique con base en el corazón de la narrativa visual. No solo capturamos video; diseñamos atmósferas.
+        </p>
+      </div>
+      <div class="space-y-6 text-sm md:text-base opacity-70 leading-relaxed">
+        <p>
+          Nuestro enfoque es radicalmente minimalista. Creemos que cada frame debe tener una razón de ser. Trabajamos con marcas y artistas que no buscan solo contenido, sino una identidad cinematográfica única.
+        </p>
+        <p>
+          Desde comerciales de alto impacto hasta documentales íntimos en 16mm, nuestra misión es elevar la estética de cada proyecto que tocamos.
+        </p>
+      </div>
+    </div>
+
+    <div class="border-t border-zinc-100 pt-20 pb-40">
+      <span class="text-[10px] font-mono uppercase tracking-[0.4em] opacity-40 mb-12 block">
+        [02] Core Team
+      </span>
+      
+      <div class="space-y-8">
+        {team.map(person => (
+          <div class="group flex justify-between items-end border-b border-zinc-100 pb-4 hover:border-black transition-colors duration-500">
+            <span class="text-[10px] uppercase font-bold tracking-widest opacity-30">{person.role}</span>
+            <h3 class="text-2xl md:text-4xl font-light italic group-hover:-translate-x-2.5 transition-transform duration-500">
+              {person.name}
+            </h3>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="pb-40 text-center md:text-left">
+      <span class="text-[10px] font-mono uppercase tracking-[0.4em] opacity-40 mb-6 block">
+        [03] Contacto
+      </span>
+      <a href="mailto:hello@sanproductions.com" class="text-3xl md:text-5xl font-light italic hover:opacity-50 transition-opacity border-b border-black pb-2 inline-block">
+        Rodemos algo juntos — hello@sanproductions.com
+      </a>
+    </div>
+
+  </section>
+</Layout>
