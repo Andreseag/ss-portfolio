@@ -16,6 +16,8 @@ const {
 
 const canonicalURL = Astro.url;
 
+const repositoryName = "/ss-portfolio"
+
 ---
 
 <!doctype html>
@@ -57,8 +59,8 @@ const canonicalURL = Astro.url;
       </a>
 
       <div class="flex gap-4 md:gap-8 items-center">
-        <a href="/" class="hover:opacity-50 transition-opacity py-2">Trabajos</a>
-        <a href="/about" class="hover:opacity-50 transition-opacity py-2">Nosotros</a>
+        <a href={`/${repositoryName}`} class="hover:opacity-50 transition-opacity py-2">Trabajos</a>
+        <a href={`/${repositoryName}/about`} class="hover:opacity-50 transition-opacity py-2">Nosotros</a>
       </div> 
 
     </nav>
