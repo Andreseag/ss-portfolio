@@ -8,4 +8,7 @@ export default defineConfig({
   site: "https://andreseag.github.io",
   base: "/ss-portfolio",
   output: "static",
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
