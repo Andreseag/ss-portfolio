@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Reemplaza esto con tu link real de Calendly
+const calendlyLink = "https://calendly.com/tu-usuario/reunion-30-min"; 
+---
+
+<Layout title="Contacto — Stills">
+  <section class="pt-40 px-8 md:px-20 pb-20 max-w-7xl mx-auto">
+    
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-20">
+      
+      <div class="md:col-span-4 flex flex-col justify-between">
+        <div>
+          <span class="text-[10px] font-mono uppercase tracking-[0.4em] opacity-40 mb-8 block">
+            [05] Contacto
+          </span>
+          <h1 class="text-4xl md:text-6xl font-light  tracking-tighter leading-none mb-10">
+            Agendemos <br />un espacio.
+          </h1>
+          <p class="text-zinc-500 font-light text-lg leading-relaxed mb-8">
+            ¿Tienes un proyecto en mente? Selecciona el día y la hora que mejor te funcionen para que hablemos sobre tu visión.
+          </p>
+        </div>
+ 
+        <div class="space-y-4 border-t border-zinc-100 pt-10">
+          <p class="text-[10px] font-mono uppercase tracking-widest opacity-40">Otras formas</p>
+          <a href="mailto:stillsmedios@gmail.com" class="block text-xl font-light  hover:opacity-50 transition-opacity">
+            stillsmedios@gmail.com
+          </a>
+          <div class="flex gap-6 pt-4">
+            <a target="_blank" href="https://www.instagram.com/stillsmedios?igsh=andoM3NzeHBraWZ6&utm_source=qr" class="text-[10px] uppercase tracking-widest font-bold hover:underline">Instagram</a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCB95SuS2QnCR6GpHkqWXlpA" class="text-[10px] uppercase tracking-widest font-bold hover:underline">Youtube</a>
+            <a target="_blank" href="https://web.facebook.com/profile.php?id=61588372559071" class="text-[10px] uppercase tracking-widest font-bold hover:underline">Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:col-span-8 bg-white border border-zinc-100 shadow-sm rounded-sm overflow-hidden min-h-[600px] md:min-h-[700px]">
+        <div 
+          class="calendly-inline-widget w-full h-full" 
+          data-url={`${calendlyLink}?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=000000`} 
+          style="min-width:320px;height:700px;"
+        ></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Personalización para que el widget se sienta más integrado */
+  .calendly-inline-widget {
+    background-color: transparent !important;
+  }
+</style>
