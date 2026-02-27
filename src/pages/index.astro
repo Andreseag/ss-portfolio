@@ -82,7 +82,7 @@ const gridProjects = projects.slice(3);
       )}
 
       {/* COLUMNA DERECHA (Dos proyectos alineados arriba y abajo) */}
-      <div class="flex flex-col justify-between md:gap-6">
+      <div class="flex flex-col justify-between gap-6">
         {gridProjects.slice(1, 3).map((project, index) => (
           <div 
             class={`project-item group video-item cursor-pointer relative overflow-hidden h-full ${index === 0 ? 'mb-0' : ''}`} 
